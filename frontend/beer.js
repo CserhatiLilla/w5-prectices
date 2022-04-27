@@ -20,13 +20,15 @@ const beerCardComponent = function (title,sub,text){
 const loadEvent = function(){
     const rootElement = document.getElementById("root");
     
-    for (let index = 1; index <= sub.text; index++) {
+    for (const text of title){
         
         let sectionInner = ""
-        sectionInner += beerCardComponent(title, sub.sub, index)
+        sectionInner += beerCardComponent(title, sub.sub, text)
+       
     }
     console.log(sectionInner);
 
     rootElement.insertAdjacentHTML("beforeend", beersTitleComponent(sectionInner, sub.text))
-
 }
+
+window.addEventListener("load", loadEvent)
