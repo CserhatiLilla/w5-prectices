@@ -23,7 +23,7 @@ const loadEvent = function(){
     for (let index = 1; index <= sub.text; index++) {
         
         let sectionInner = ""
-        sectionInner += dayCardComponent(title, sub.sub, index)
+        sectionInner += beerCardComponent(title, sub.sub, index)
     }
     console.log(sectionInner);
 
